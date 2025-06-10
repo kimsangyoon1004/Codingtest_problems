@@ -1,2 +1,2 @@
-# SWEA_Codingtest
-SWEA Codingtest
+# Coding Test Problems
+
