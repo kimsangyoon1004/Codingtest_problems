@@ -1,0 +1,32 @@
+import java.util.*;
+class Solution {
+    public int solution(int[][] board, int[] moves) {
+        int answer = 0;
+        int picked = 0;
+        Stack<Integer> stack = new Stack<>();
+        stack.push(0);
+        int row;
+        for(int i = 0; i < moves.length; i++){
+            row = 0;
+            while(row < board.length){
+                if(board[row][moves[i] - 1] != 0){
+                    picked = board[row][moves[i] - 1];
+                    System.out.println(picked);
+                    board[row][moves[i] - 1] = 0;
+                    if(stack.peek() == picked){
+                        stack.pop();
+                        answer += 2;
+                    }
+                    else{
+                        stack.push(picked);
+                    }
+                    break;
+                }
+                else{
+                    row++;
+                }
+            }
+        }
+        return answer;
+    }
+}
