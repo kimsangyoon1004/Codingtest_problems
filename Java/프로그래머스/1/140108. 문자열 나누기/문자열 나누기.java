@@ -1,4 +1,5 @@
 class Solution {
+    // practice dfs
     static int count;
     public int solution(String s) {
         count = 0;
