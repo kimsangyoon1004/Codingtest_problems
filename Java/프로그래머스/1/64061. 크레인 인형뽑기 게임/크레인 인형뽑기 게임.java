@@ -11,13 +11,11 @@ class Solution {
             while(row < board.length){
                 if(board[row][moves[i] - 1] != 0){
                     picked = board[row][moves[i] - 1];
-                    System.out.println(picked);
                     board[row][moves[i] - 1] = 0;
-                    if(stack.peek() == picked){
+                   if (!stack.isEmpty() && stack.peek() == picked) {
                         stack.pop();
                         answer += 2;
-                    }
-                    else{
+                    } else {
                         stack.push(picked);
                     }
                     break;
