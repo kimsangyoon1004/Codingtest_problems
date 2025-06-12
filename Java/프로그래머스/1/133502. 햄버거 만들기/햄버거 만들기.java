@@ -1,12 +1,11 @@
 import java.util.*;
 
 class Solution {
+    // 1 = bread, 2 = vege, 3 = meat
+    // 1 - 2 - 3 - 1
     public int solution(int[] ingredient) {
-        // 1 = bread, 2 = vege, 3 = meat
-        // 1 - 2 - 3 - 1
         Stack<Integer> stack = new Stack<>();
         int answer = 0;
-
         for (int ing : ingredient) {
             stack.push(ing);
             if (stack.size() >= 4) {
