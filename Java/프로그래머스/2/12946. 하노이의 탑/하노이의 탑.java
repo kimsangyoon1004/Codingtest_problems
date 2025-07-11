@@ -5,7 +5,7 @@ class Solution {
 
     public int[][] solution(int n) {
         hanoi(n, 1, 3, 2);
-        // 리스트를 2차원 배열로 변환
+        
         return result.toArray(new int[result.size()][]);
     }
 
