@@ -28,7 +28,7 @@ class Solution {
             if (diff <= level) {
                 sum += currentTime;
             } else {
-                long beforeTime = (i == 0) ? 0 : times[i - 1]; 
+                long beforeTime = times[i - 1]; 
                 long repeat = diff - level;
                 long currentTimeTook = (currentTime + beforeTime) * repeat + currentTime;
                 sum += currentTimeTook;
