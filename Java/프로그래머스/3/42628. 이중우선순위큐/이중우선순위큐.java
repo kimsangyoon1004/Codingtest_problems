@@ -35,8 +35,5 @@ class Solution {
         else{
             return new int[]{dpq.lastKey(), dpq.firstKey()};
         }
-        
-        
-        
     }
 }
