@@ -7,7 +7,7 @@ class Solution {
         int aIndex = 0;
         int bIndex = 0;
         int win = 0;
-        while(aIndex < A.length && bIndex < B.length){
+        while(bIndex < B.length){
             if(B[bIndex] > A[aIndex]){
                 win++;
                 aIndex++;
