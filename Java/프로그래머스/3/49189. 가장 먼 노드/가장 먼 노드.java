@@ -3,10 +3,10 @@ class Solution {
     public int solution(int n, int[][] edge) {
         int answer = 0;
         List<Integer> longestNode = new ArrayList<>();
-        List<HashSet<Integer>> nodes = new ArrayList<>();
+        List<List<Integer>> nodes = new ArrayList<>();
         boolean[] visited = new boolean[n + 1];
         for(int i = 0; i <= n; i++){
-            nodes.add(new HashSet<>());
+            nodes.add(new ArrayList<>());
         }
         for(int i = 0; i < edge.length; i++){
             nodes.get(edge[i][0]).add(edge[i][1]);
@@ -17,7 +17,7 @@ class Solution {
         int count = Collections.frequency(longestNode, maxLength);
         return count;
     }
-    static void bfs(List<HashSet<Integer>> nodes, List<Integer> longestNode, boolean[] visited, int start){
+    static void bfs(List<List<Integer>> nodes, List<Integer> longestNode, boolean[] visited, int start){
         Queue<int[]> queue = new LinkedList<>();
         queue.offer(new int[]{start, 0});
         visited[start] = true;
