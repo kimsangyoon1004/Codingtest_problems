@@ -1,10 +1,9 @@
 import java.util.*;
 
 class Edge {
-    int to, cost;
-    Edge(int to, int cost) {
+    int to;
+    Edge(int to) {
         this.to = to;
-        this.cost = cost;
     }
 }
 
@@ -18,8 +17,8 @@ class Solution {
         for (int[] road : roads) {
             int a = road[0];
             int b = road[1];
-            nodes.get(a).add(new Edge(b, 1));
-            nodes.get(b).add(new Edge(a, 1));
+            nodes.get(a).add(new Edge(b));
+            nodes.get(b).add(new Edge(a));
         }
 
         int[] dist = new int[n + 1];
