@@ -1,18 +1,18 @@
 import java.util.*;
-
-class Solution {
-    public int solution(String s) {
-        Stack<Character> stack = new Stack<>();
-
-        for (int i = 0; i < s.length(); i++) {
-            char c = s.charAt(i);
-            if (!stack.isEmpty() && stack.peek() == c) {
-                stack.pop();  
-            } else {
-                stack.push(c);  
+class Solution
+{
+    public int solution(String s)
+    {
+        int answer = -1;
+        Stack<Character> st = new Stack<>();
+        for(char c : s.toCharArray()){
+            if(!st.isEmpty() && st.peek() == c){
+                st.pop();
+                continue;
             }
+            st.push(c);
         }
-
-        return stack.isEmpty() ? 1 : 0;
+        answer = st.isEmpty() ? 1 : 0;
+        return answer;
     }
 }
